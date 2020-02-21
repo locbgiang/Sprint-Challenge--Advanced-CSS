@@ -1,1 +1,38 @@
 // Mixins Here
+.displayFlex(@direction:row, @justify:space-between, @align:center){
+    display:flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.headerTextDec(@size:3.6rem,@color:@header-font-color,@decoration:none){
+    font-size:@size;
+    color:@color;
+    text-decoration: @decoration;
+}
+
+.mainTextDec(@size:1.6rem,@color:@main-font-color,@decoration:none){
+    font-size: @size;
+    color:@color;
+    text-decoration: @decoration;
+}
+
+.customButton(@background:@btn-bg-color , @fontColor:white , @width:90px, @height:25px){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: @background;
+    width:@width;
+    height:@height;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    color:@fontColor;
+    &:hover{
+        background-color: @fontColor;
+        color:@background;
+    }
+}
+
+//escaping
+@phone:(max-width:500px);
